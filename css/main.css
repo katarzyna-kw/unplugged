@@ -113,33 +113,43 @@
   ul, 
   ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
    
   a {
     color: #e2e3ed;
     text-decoration: none;
-    text-transform: uppercase;
   }
    
   h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.875em;
     font-weight: 500;
+    font-size: 1.875em;
+    margin: 0;
   }
    
   h3, 
   h4 {
     font-family: 'Poppins', sans-serif;
-    margin: 20px 0;
-    font-size: 1.125em;
     font-weight: 500;
+    font-size: 1.125em;
+    margin: 20px 0;
   }
    
   p {
     font-size: .875em;
     line-height: 1.285;
   }
-    
+   
+  img {
+   width: 100%;
+  }
+   
+  figure {
+   margin: 0;
+  }
+   
   address {
    font-style: normal;
   }
@@ -149,15 +159,6 @@
     margin: 50px 0;
   }
   
-img {
-  width:100%;
-
-}
-
-figure {
-  margin: 0;
-}
-
   /* -------------------- Base Header - Footer Styles -------------------- */
   
   header,
@@ -181,21 +182,21 @@ figure {
     flex-flow: row wrap;
   }
   
-  .header-divider {
-    background: #3a3a3a; 
-    width: 100%;
-    height: 1px;
-    margin: 10px 0 20px 0;
-  }
-  
   header figure {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-}
-
+  }
+  
+  .header-divider {
+    background: #3a3a3a; 
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+  }
+  
   header nav {
     width: 60%;
     font-size: 1.125em;
@@ -208,18 +209,18 @@ figure {
   }
   
   header nav ul {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    width: 100%;
   }
   
   header nav ul li {
     font-size: 1.125em;
   }
-
+  
   footer {
-    flex-direction: column;
     text-align: center;
+    flex-direction: column;
   }
   
   footer p {
@@ -242,46 +243,55 @@ figure {
   }
   
   footer .social-icons p {
+    background-color: #527158;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  footer .social-icons p i {
+    font-size: 1.3125em;
   }
   
   footer .copyright {
     margin: 20px 0;
   }
   
-  
   /* -------------------- Mobile Styles - Homepage -------------------- */
   
   /* Hero Area */
   
   .hero-area {
+    background: url(../img/unplugged-retreat.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background: url('../img/unplugged-retreat.jpg') center no-repeat #333;
-    background-size: cover;
   }
-
+  
   .hero-area h1 {
     font-size: 2.25em;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    line-height: 1.2;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif; 
+    font-weight: 500; 
+    line-height: 1.2; 
   }
   
   /* Aside */
   
   aside {
+    background-color: #527158;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    background-color: #527158;
   }
   
-  aside .form{
+  aside .form {
     margin-top: 30px;
   }
   
@@ -306,15 +316,16 @@ figure {
     text-align: center;
     text-transform: uppercase;
   }
-
+  
   /* Features */
   
   .features {
+    background: url('../img/unplugged-retreat-features.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background: url('../img/unplugged-retreat-features.jpg') center no-repeat #333;
-    background-size: cover;
   }
   
   .features h2 {
@@ -335,7 +346,7 @@ figure {
   
   .features i {
     font-size: 3.75em;
-          margin-bottom: 40px;
+    margin-bottom: 40px;
   }
   
   .features p {
@@ -346,10 +357,10 @@ figure {
   /* Reviews */
   
   .reviews {
+    background-color: #2a423a;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background-color: #2a423a;
   }
   
   .reviews h2 {
@@ -374,6 +385,22 @@ figure {
     flex-flow: row wrap;
   }
   
+  .map figure {
+    width: 100%;
+    height: 0; 
+    padding-bottom: 125%; 
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+  }
+  
   .contact-section {
     background-color: #2a423a;
     display: flex;
@@ -381,23 +408,7 @@ figure {
     align-items: center;
     flex-flow: row wrap;
   }
-
-  .map figure {
-    width: 100%;
-    height: 0;
-    padding-bottom: 125%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
+  
   .contact-content p {
     margin: 0;
   }
@@ -430,11 +441,15 @@ figure {
   .faq-content {
     margin-bottom: 50px;
   }
-
-  .faq-conent h4 {
+  
+  .faq-content {
+    margin-bottom: 50px;
+  }
+  
+  .faq-content h4 {
     line-height: 1.333;
   }
-
+  
   /* ==========================================================================
      Helper classes
      ========================================================================== */
@@ -524,32 +539,6 @@ figure {
      Modify as content requires.
      ========================================================================== */
   
-     aside .form {
-      margin-top: 30px;
-    }
-    
-    input[type=text] {
-      box-sizing: border-box;
-      width: 100%;
-      color: #2a423a;
-      font-style: italic;
-      padding: 1em;
-    }
-    
-    input[type=button] {
-      width: 100%;
-      padding: 20px 0;
-      margin-top: 20px;
-      background-color: #2a423a;
-      font-family: 'Poppins', Helvetica, Arial, sans-serif;
-      font-weight: 500;
-      font-size: 1.125em;
-      color: #e2e3ed;
-      border: none;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
   @media only screen and (min-width:768px) {
     /*Tablet styles here*/
   
@@ -558,18 +547,17 @@ figure {
       max-width: 640px;
       margin: 100px 0;
     }
-
-  h2 {
-    font-size: 2.25em;
-    line-height: 1.333;
-  }
-
-  h3 {
-    font-size: 1.5em;
-    line-height: 1.25;
-  }
-
-
+        
+    h2 {
+      font-size: 2.25em;
+      line-height: 1.333;
+    }
+  
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.25;
+    }
+  
     /* Header */
     header {
       justify-content: space-around;
@@ -580,13 +568,13 @@ figure {
       width: 100%;
       justify-content: space-between;
     }
-
+  
     header figure {
       width: 30%;
     }
   
     header nav {
-      width: 30%;
+      width: 20%;
     }
   
     header nav ul {
@@ -597,6 +585,16 @@ figure {
       display: none;
     }
     /* Hero Area */
+  
+    .hero-area {
+      min-height: 600px;
+    }  
+  
+    .hero-area h1 {
+      font-size: 3em;
+      line-height: 1;
+      margin: 0;
+  }
   
     /* Aside */
     aside .content-wrapper {
@@ -613,11 +611,11 @@ figure {
     }
   
     /* Features */
-
+  
     .features h2 {
       margin-bottom: 20px;
     }
-
+  
     .features article {
       display: flex;
       justify-content: center;
@@ -630,30 +628,29 @@ figure {
       width: 62%;
     }
   
+    .features i {
+      margin-bottom: 30px;
+    }
+  
     /* Reviews */
     .reviews article {
       display: flex;
       justify-content: space-between;
     }
-
-    .reviews article figure,
-    .reviews article div {
-      width: 49%;
-    }
-
+  
     .reviews h2 {
       width: 85%;
     }
   
+    .reviews article figure,
     .reviews article div {
       width: 49%;
     }
-
+  
     .reviews h3 {
       width: 75%;
       margin: 0;
-  }
-  
+    }
     /* Footer */
     footer .content-wrapper {
       width: 65%;
@@ -670,7 +667,7 @@ figure {
     footer .contact {
       margin-bottom: 0;
     }
-
+  
     footer h4 {
       font-size: 1.5em;
       margin-bottom: 40px;
@@ -680,6 +677,11 @@ figure {
         line-height: 1.285;
     }
   
+    footer .social-icons {
+      width: 12.5em;
+      justify-content: space-between;
+    }
+    
     footer .copyright {
       width: 100%;
     }
@@ -698,11 +700,11 @@ figure {
     .mission-content p {
       width: 45%;
     }
-
+  
     .map figure {
       padding-bottom: 45.5%;
     }
-
+  
     .contact-section .content-wrapper h2 {
       width: 80%;
     }
@@ -712,11 +714,10 @@ figure {
       justify-content: space-between;
       align-items: flex-start;
     }
-
+  
     .contact-content h4 {
       font-size: 1.5em;
     }
-  
   
     /* ==========================================================================
      FAQ Page
@@ -733,7 +734,7 @@ figure {
     .faq h2 {
       width: 100%;
     }
-
+  
     .faq h4,
     .faq p {
         font-size: .875em;
@@ -748,10 +749,6 @@ figure {
       padding: 15px 0;
     }
   
-    header nav {
-      width: 20%;
-    }
-
     .content-wrapper {
       max-width: 960px;
     }
@@ -769,11 +766,11 @@ figure {
         font-size: 1.125em;
         line-height: 1.333;
     }
-
-  /* Hero */
+  
+    /* Hero */
     .hero-area h1 {
-    font-size: 3.75em;
-    width: 60%;
+      font-size: 3.75em;
+      width: 80%;
     }
   
     /* Aside */
@@ -785,7 +782,7 @@ figure {
     aside .content-wrapper .form {
       width: 30%;
     }
-
+  
     .form-description p {
       font-size: 1.125em;
     }
@@ -801,21 +798,21 @@ figure {
     }
     
     /* Reviews */
-    .reviews article div {
-      width: 42%;
-    }
-
+  
     .reviews h2 {
       padding-bottom: 50px; 
     }
-      
+    
+    .reviews article div {
+      width: 42%;
+    }
+  
     footer h4 {
       font-size: 1.875em;
-    }  
+    }
     /* ==========================================================================
     About Page
     ========================================================================== */
-
     .map figure {
       padding-bottom: 37.5%;
     }
@@ -824,12 +821,12 @@ figure {
     .contact-section .content-wrapper h2 {
         width: 95%;
         font-size: 3em;
-      }
-    
-      .contact-content h4 {
-        font-size: 1.875em;
-      }
-
+    }
+  
+    .contact-content h4 {
+      font-size: 1.875em;
+    }
+  
     /* ==========================================================================
     FAQ Page
     ========================================================================== */
@@ -837,13 +834,12 @@ figure {
       width: 100%;
       font-size: 3em;
     }
-
+      
     .faq h4,
     .faq p {
-      font-size: 1.125em;
-      line-height: 1;
+        font-size: 1.125em;
+        line-height: 1;
     }
-  
   }
   
   /* ==========================================================================
